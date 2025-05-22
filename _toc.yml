@@ -7,8 +7,9 @@ parts:
     - file: pages/part01/00-intro
   - caption: Sinais e Sistemas
     numbered: True
-    chapters:
-    - file: pages/part02/chapter01/00-signals
-      sections:
-      - file: pages/part02/chapter01/01-fourier-series
-      - file: pages/part02/chapter01/02-fourier-series-math
+    chapters:    
+      - file: pages/part02/chapter01/00-signals
+      - file: pages/part02/chapter01/01-fourier
+        sections:
+          - file: pages/part02/chapter01/02-fourier-series
+          - file: pages/part02/chapter01/03-fourier-series-math
