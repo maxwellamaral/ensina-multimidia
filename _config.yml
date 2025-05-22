@@ -1,6 +1,10 @@
 sphinx:
   extra_extensions:
     - sphinx_proof
-
+  config:
+      bibtex_reference_style: author_year
+      bibtex_bibfiles: refs.bib
 execute:
   execute_notebooks: cache    
+
+    
