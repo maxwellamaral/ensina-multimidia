@@ -6,11 +6,15 @@ readme = "README.md"
 requires-python = "==3.9.22"
 dependencies = [
     "ipywidgets>=8.1.7",
-    "jupyter-book>=2.0.0a0",
+    "jupyter-book>=2.0.0a",
     "jupyterlab>=4.4.2",
     "jupyterlab-myst>=2.4.2",
+    "matplotlib>=3.9.4",
     "numpy>=2.0.2",
+    "pandas>=2.2.3",
     "plotly>=6.1.1",
     "scipy>=1.13.1",
     "simpleaudio>=1.0.4",
+    "sphinx-proof>=0.2.1",
+    "sympy>=1.14.0",
 ]

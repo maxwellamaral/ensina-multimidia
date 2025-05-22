@@ -1,0 +1,6 @@
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+
+execute:
+  execute_notebooks: cache    
