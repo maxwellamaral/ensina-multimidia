@@ -16,19 +16,19 @@ def plot_signal(
     show_legend=True,
 ):
     """
-    Plot a line chart for one or more audio signals using Plotly.
-        time_vector (iterable): An array or list of time points for the x-axis.
-        *audio_data_list (iterable): One or more arrays/lists of amplitude values corresponding to the time points.
-        t_inicial (float, optional): The starting time for the x-axis range. Defaults to the first element in time_vector.
-        t_final (float, optional): The ending time for the x-axis range. Defaults to the last element in time_vector.
-        labels (list of str, optional): A list of labels for the audio signals. If not provided or if there are fewer labels
-                                        than signals, default labels ("Sinal 1", "Sinal 2", etc.) will be used.
-        title (str, optional): The title of the plot.
-        subtitle (str, optional): The subtitle of the plot.
-        x_title (str, optional): The label for the x-axis.
-        y_title (str, optional): The label for the y-axis.
-        show_legend (bool, optional): Whether to display the legend. Defaults to True.
-        The function displays the generated plot automatically using Plotly's display mechanism.
+    Plota um gráfico de linha para um ou mais sinais de áudio usando Plotly.
+        time_vector (iterável): Um array ou lista de pontos de tempo para o eixo x.
+        *audio_data_list (iterável): Um ou mais arrays/listas de valores de amplitude correspondentes aos pontos de tempo.
+        t_inicial (float, opcional): O tempo inicial para o intervalo do eixo x. O padrão é o primeiro elemento em time_vector.
+        t_final (float, opcional): O tempo final para o intervalo do eixo x. O padrão é o último elemento em time_vector.
+        labels (list de str, opcional): Uma lista de rótulos para os sinais de áudio. Se não fornecido ou se houver menos rótulos
+                                        do que sinais, rótulos padrão ("Sinal 1", "Sinal 2", etc.) serão usados.
+        title (str, opcional): O título do gráfico.
+        subtitle (str, opcional): O subtítulo do gráfico.
+        x_title (str, opcional): O rótulo para o eixo x.
+        y_title (str, opcional): O rótulo para o eixo y.
+        show_legend (bool, opcional): Se deve exibir a legenda. O padrão é True.
+        A função exibe o gráfico gerado automaticamente usando o mecanismo de exibição do Plotly.
     """
     fig = go.Figure()
     for i, audio_data in enumerate(audio_data_list):
@@ -59,7 +59,7 @@ def plot_signal(
             linewidth=2,
             linecolor="black",
             gridcolor="lightgray",
-            range=[t_inicial, t_final]
+            range=[t_inicial, t_final],
         ),
         yaxis=dict(
             showline=True,
@@ -90,14 +90,14 @@ def plot_signal(
 # Função para tocar a nota com um determinado volume
 def play_sound(audio_data, sample_rate, volume=0.5, autoplay=True):
     """
-    Plays a sound by scaling its amplitude and initializing an Audio object for playback.
-    Parameters:
-        audio_data (array-like): The input sound data to be played.
-        sample_rate (int): The sample rate for the audio playback.
-        volume (float, optional): The factor by which to scale the sound's amplitude. Defaults to 0.5.
-        autoplay (bool, optional): Whether to start playback automatically. Defaults to True.
-    Returns:
-        Audio: An Audio object instantiated with the scaled sound, configured to autoplay and normalized.
+    Reproduz um som escalonando sua amplitude e inicializando um objeto Audio para reprodução.
+    Parâmetros:
+        audio_data (array-like): Os dados de som de entrada a serem reproduzidos.
+        sample_rate (int): A taxa de amostragem para a reprodução do áudio.
+        volume (float, opcional): O fator pelo qual a amplitude do som será escalonada. O padrão é 0.5.
+        autoplay (bool, opcional): Se a reprodução deve iniciar automaticamente. O padrão é True.
+    Retorna:
+        Audio: Um objeto Audio instanciado com o som escalonado, configurado para reprodução automática e normalizado.
     """
 
     # Escala a nota pelo volume
