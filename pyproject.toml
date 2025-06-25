@@ -17,5 +17,6 @@ dependencies = [
     "scipy>=1.13.1",
     "simpleaudio>=1.0.4",
     "sphinx-proof>=0.2.1",
+    "streamlit>=1.45.1",
     "sympy>=1.14.0",
 ]
